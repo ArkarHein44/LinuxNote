@@ -1,0 +1,204 @@
+=> For Shutdown
+sudo poweroff
+
+=>For restart (reboot)
+sudo reboot
+
+=> Check Current User
+who         // arkarhein pts/1        2024-02-28 21:52
+whoami      // arkarhein
+
+=>Check Host Name
+hostname    // DESKTOP-GB0C9RK
+
+=>Check 32bit processor or 64bit processor
+uname -a                //Linux DESKTOP-GB0C9RK 5.15.133.1-microsoft-standard-WSL2 #1 SMP Thu Oct 5 21:02:42 UTC 2023 x86_64 x86_64 x86_64 GNU/Linux
+uname -i or uname -m     //x86_64
+getconf LONG_BIT         //64
+
+=>Login as root User
+apt-get update
+
+sudo -s
+Enter administrator user password
+apt-get update
+exit
+
+(or)
+
+sudo sudo
+apt-get update
+whoami          //root
+exit
+
+=>Setpassword or Changing root's password
+sudo passwd root
+new password : 123456789
+retype new password : 123456789
+
+=>Method 1          // root@DESKTOP-GB0C9RK:/home/arkarhein#
+sudo -s
+whoami
+exit
+
+=Method 2           //root@DESKTOP-GB0C9RK:/home/arkarhein#
+sudo su
+whoami
+exit
+
+=Method 3               (su = switch user)
+su -                    //root@DESKTOP-GB0C9RK:~#
+password : 123456789
+whoami
+exit
+
+=Method 4               //root@DESKTOP-GB0C9RK:/home/arkarhein#
+su 
+whoami
+password : 123456789
+exit
+
+=>Changing Password of Current Users
+su
+passwd
+Current password:
+New password: 123456789abc
+
+=>Creat New User Account
+=Method 1
+sudo useradd user1      (just created account, without user1 folder)
+
+=Method 2
+sudo useradd user2 -m       (cd /,cd home, ls = you will see system reated folder in under home folder)
+
+=>Display all Users
+compgen -u              (only username)
+getent passwd           (or)        cat /etc/passwd     (all info)
+
+
+=>Display Single Users
+getent passwd user1         (single user all info)
+id                          (current login group detail info)
+id user1                    (single user group info)
+
+
+=>Set new user password in terminal
+sudo passwd user1
+newpassword: 123456789
+retype new password: 123456789
+
+=>switch user in terminal
+su user1
+password: 123456789
+whoami
+exit
+
+su user2
+password : 123456789
+whoami
+exit
+
+
+ls -l
+su user1
+password : 123456789
+whoami
+cd /
+ls
+cd administrator        //error can't acess
+cd user2                 //error can't acess
+cd user3                 //error can't acess           
+mkdir user1
+ls
+exit
+
+ls -l
+su user2
+password : 123456789
+whoami
+cd /
+ls
+cd administrator        //error can't acess
+cd user2                 
+cd user3                 //error can't acess           
+mkdir userfolder2
+echo "Hello"> file0.txt
+ls
+exit
+
+
+ls -l
+su user2
+password : 123456789
+whoami
+cd /
+ls
+cd administrator        //error can't acess
+cd user2                 //error can't acess
+cd user3                 
+mkdir userfolder3
+echo "Hello"> file0.txt
+ls
+exit
+
+=>Delete User
+=Method 1
+sudo deluser user2  (or)  sudo userdel user1    (delete user without deleting directory)
+
+=Method 2
+sudo deluser --remove-home user3        (delete user deleting files and directories under home folder )
+
+
+id user2
+compgen -u
+cd /
+ls
+cd home         (result = remain only administrator & user2 folders)
+ls -l   
+
+
+sudo useradd user1 (without message/ without password / without info)
+compgen -u
+
+sudo adduser user2 (with message / with password / with info)
+compgen -u
+
+sudo useradd user3 -m
+compgen -u
+=sudo passwd user3
+new password = 123456789
+retype new password = 123456789
+=su suer3
+password 123456789
+whoami
+exit
+whoami
+
+=>lock or unlock user password
+sudo passwd -l user3        (lock)
+sudo passwd -u user3        (Unlock)
+
+=su user3
+sudo passwd -l user3
+su user3
+password = 123456789        (su : Authentication failure)
+whoami
+
+sudo passwd -u user3
+su user3
+password = 123456789
+whoami
+exit
+
+
+
+
+
+
+
+
+
+
+attcode
+28FP
+6US

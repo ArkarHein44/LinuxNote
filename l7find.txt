@@ -1,0 +1,15 @@
+=>find
+
+find
+ctrl+c (stop)
+
+find -name l5file.txt
+find -name '*l5file*'
+find -name '*l5file' (no result cuz start * is any name, end * is any continuously name)
+find -name 'l5file'
+
+--------------------------------------------------------------
+
+
+
+14FD

@@ -1,0 +1,113 @@
+=> File Permission
+
+ls -l
+
+-rw-rw-r-- l administrator administrator 1239 Feb 21 23:03 l11symboliclink.txt
+
+-rw-rw-r--          = Permission
+1                   = number of links 
+administrator       = owner name
+administrator       = Group name
+1239                = Number of bytes in the File
+Feb 21 23:03        = Last modification time
+l11symboliclink.txt = File name
+
+ .          This directory
+ ..         The parent 
+ 
+ =Note
+-           File
+d           directory
+
+
+ ls -l
+ cd l11folder
+ ls -La
+
+ cd -
+
+ ls -l
+ cd yourfolder9
+ ls -l 
+ ls -la 
+
+ cd myfolder10
+ ls -la
+
+ cd yourfolder8 
+ ls -la
+
+ ------------------------------------------------------------
+=>File Permission
+
+Read (r)      = 4           allows a file to be Read
+Write(w)      = 2           allows a file to modified
+Execute (x)   = 1           allows th execution of a file
+
+=> Permission Categories
+Categoriy   Symbol
+User        u 
+Group       g 
+Other       o
+All         a 
+
+=> Changing Permissions
+Item        Meaning
+chmod       Change mode command
+ugoa        user group other allows
++-=         Add,Substract,Set Permission
+rwx         Read,Write,Execute
+
+=> directory listing attributes
+numeric value       4(read)  2(write)  1(execute)   Permission name
+0                   -        -         -            no Permission
+1                   -        -         x            execute Permission
+2                   -        w         -            write only
+3                   -        w         x            write and execute
+4                   r        -         -            read only
+5                   r        -         x            read and execute
+6                   r        w         -            read and write
+7                   r        w         x            read write and execute
+
+(Note : to go)
+d or -      rwx         rwx       rwx
+type        user/owner  group     other
+
+=>Commonly Used Permission
+Symbolic                        Octal
+-rwx------                      700
+-rwxr-xr-x                      755
+-rw-rw-r--                      664
+-rw-rw----                      660
+-rw-r--r--                      644
+-rwxrwxrwx                      777
+
+=>Listing File by type
+ls -l 
+ls -F 
+Ls -lF 
+
+/      = directory
+@       = link
+*       = Executeable
+
+=>man (Such as Help or Browser or Documentation)
+ctl+alt+t
+man ls
+man mkdir
+man vim
+man Categories
+
+q(q = quit)
+
+- file
+d- directory
+l - link
+
+- - 0
+r - 4
+w - 2
+x - 1
+
+rwx - 4+2+1 - 7
+r-- - 4+0+0 - 4

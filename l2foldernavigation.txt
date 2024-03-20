@@ -1,0 +1,68 @@
+=>Folder Navigation
+
+.	= This directory
+..	= The parent directory
+cd	= Go to next directory
+cd - 	= Change to the previous directory(change directory)
+/	= Directory separator(forward slash)
+
+=>Check current directory
+pwd		/home/arkarhein
+ls
+ls ..		//arkarhein
+ls ../.. 	// bin dev lib libx32 mnt root snap sys var boot etc ...
+
+ctrl+alt+t
+ls
+cd Music/
+ls
+cd folderone/
+ls
+cd 1/
+ls
+cd ..
+ls
+cd ..
+ls
+pwd	//home/arkarhein/Music
+cd 'folder two'
+ls
+cd ..
+pwd 	// /home/arkarhein/Music
+cd folder\ two
+
+ctrl+alt+t
+ls
+cd Music/
+ls
+cd folderone/
+ls
+cd 1/
+ls
+cd
+pwd	// /home/arkarhein
+
+ctrl+alt+t
+ls
+cd Music/
+ls
+cd folderone/
+ls
+cd 1/
+ls
+cd - 	// /home/arkarhein/Music/folderone
+cd -	// /home/arkarhein/Music/folderone/1
+cd - 	// /home/arkarhein/Music/folderone
+cd -	// /home/arkarhein/Music/folderone/1
+
+ctrl+alt+t
+ls
+cd Music/
+ls
+cd folderone/
+ls
+cd 1/
+ls
+cd /	// /(Root)
+
+

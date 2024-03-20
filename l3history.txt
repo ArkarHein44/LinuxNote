@@ -1,0 +1,62 @@
+=>History Commands
+
+=>Clear terminal
+clear 
+ctrl+m+l	(clear)
+ctrl+m (new line)
+ctrl+l	(clear)
+
+=>Close Terminal
+exit
+ctrl+d
+
+=>Cursor to start char in terminal
+ctrl+a
+
+=>Cursor to end char in terminal
+ctrl+e
+
+att code --10CE
+
+=>Findd used comands again
+ctrl+r
+enter(if you want to use)
+ctrl+g(if you want to cancel)
+
+=>Command callback
+press up arrow key (callback)
+press down arrow key (callback)
+!!			(callback last command and run again)
+history			(see all comand history)
+history5		(see last 5 comand history)
+!1453           (callback history from comands history and run again)
+!1453:p         (get comand from comands history just print)
+history -c		(clear all history)
+
+=>wget
+wget paste
+
+=> Check all history in .bash_history
+ctrl+alt+t
+ls
+ls -l
+ls -a
+ls -l -a 
+ls -la or ls -al
+ls -lah or ls -alh
+cat .bash_history
+vim .bash_history
+ctl+c
+:qa
+
+=>Ignore Space
+ls -l -a
+history
+ ls -la
+history
+cd 
+cd
+cd
+cd
+history (if type many times ! hsitory record only one time)
+

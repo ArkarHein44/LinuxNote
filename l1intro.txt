@@ -1,0 +1,40 @@
+=>Linux color
+blue	Directory
+Green	Excutable or recoginzed data
+Skyblue	Symbolic link file
+Pink	Graphic image file
+Red	Archive file (zip, tar,tar.gz etc...)
+
+=>common Dictories
+/	"Root" the top of the file system
+/bin	Binary or executable programs
+/etc	System configuration files
+/home	home directory. it is the default current directory
+/opt	Optional or third-party software
+/tmp	Temporty space, typically cleared on reboot
+/usr	User related  programs
+/var	variable data,most notably log files
+
+=>Basic Line Commands
+ls	- lists directory contents
+cd	- Change the current directory
+pwd	- present working directory
+cat	- Concatenates 
+echo	- Display arguments to the screen
+exit	- Exit the shell or your current session
+clear	- clear the screen
+
+=>APT (Advanced Packaging Tool)
+
+sudo apt-get update
+sudo apt update
+
+sudo apt-get upgrade
+sudo apt upgrade
+
+everytime install software check this
+sudo apt-get upgrade -y
+sudo apt upgrade -y
+
+for one line code
+sudo apt-get update && sudo apt-get upgrade -y

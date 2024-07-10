@@ -1,0 +1,55 @@
+=> Web Server
+
+=> Step 1 : Update Your System
+
+    sudo apt-get Update
+    sudo apt-get upgrade -y 
+    reboot
+------------------------------------------------------
+
+=> Step 2 : Install Apache
+
+    sudo apt install apache2
+
+    Question : y
+
+        Config : /etc/apache2/apache2.conf The main configuration file is located
+        a2enmod rewrite (apache2 enable mod) to enable URL rewriting, you can enable the mode rewrite module
+        sudo systemctl restart apache2
+
+Note :  sudo systemctl enable apache2
+        sudo systemctl restart apache2
+------------------------------------------------------
+
+=> Step 3 : Manage Firewall
+
+    Note = ufw status
+    sudo ufw enable
+
+    ufw status
+        sudo ufw allow ssh
+        sudo ufw allow 3306     for mysql port
+
+    sudo ufw app list 
+
+        sudo ufw allow 'Apache'     to allow HTTP traffic on port : 80
+        sudo ufw allow 'Apache Secure'     to allow HTTPS traffic on port : 443
+        sudo ufw allow 'Apache Full'     to allow both  HTTP and HTTPS traffic
+    
+    sudo ufw status
+    sudo ufw reload
+------------------------------------------------------
+
+=> Step 4 : Install mysql
+
+sudo apt install mysql-Server
+Question : y
+
+    sudo ufw enable
+
+
+
+
+5WS
+
+

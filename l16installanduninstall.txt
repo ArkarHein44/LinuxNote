@@ -1,0 +1,96 @@
+=> Install Package & Remove Package 
+
+=> Method 1
+    Using the Ubuntu Software Center
+
+=> Method 2
+    =>Finding Installable Software with (sudo apt       
+        install package_name)
+        Ctl + Alt + t
+        sudo dpkg --list
+
+    =>Listing all installed package (even Os defaul)
+        sudo apt list --installed
+
+=> Method 3
+    Facial DEB download file install (.deb files on Ubuntu and Debian base linux distributions)
+
+8IN
+
+
+
+=> Install Application 
+sudo snap install package_name
+
+sudo snap install tree
+sudo snap install vlc
+sudo snap install discord
+sudo snap install spotify
+sudo snap install notepad plus plus
+
+=> See changes or updates 
+snap changes
+
+=> Remove Packages
+    (i) => Remove Package
+        sudo snap remove tree
+
+    (ii) =>  update all installed snap Packages
+        sudo snap refresh
+
+
+=> Method 4: Using PPA (Personal Package Archive)
+
+sudo add-apt-repository ppa:repositoryname  https://launchpad.net/ubuntu/+ppas
+= Install Application
+sudo add-apt-repository ppa:phd/firefox
+sudo apt-get update
+
+=Remove Package
+        (i) =>Remove Package
+            sudo add-apt-repository -r ppa:repositoryname (or) sudo add-apt-repository --remove ppa:repositoryname
+            sudo apt-get update
+
+            sudo add-apt-repository -r ppa:phd/firefox
+            sudo apt-get update
+
+            => if can't uninstall (do manually)
+            sudo rm /etc/apt/sources.list.d/packagename
+
+            =>if needed key name for uninstall
+                sudo apt-key list
+                sudo apt-key del keyid
+                sudo apt update
+
+        (ii) => Remove package (Method 2 ) ( need = sudo apt install ppa-purge)
+
+        sudo ppa-purge ppa:repositoryname
+
+        sudo ppa-purge ppa:phd/firefox
+        sudo apt-get update
+
+    =>Method 5
+    Facial DEB download file install (.deb files on Ubuntu and debian based linux distributions )
+
+    =.deb
+    cd ~/downloads/
+    sudo dpkg -i installer_file.deb
+
+    cd ~/downloads/
+    sudo apt-get install -f     //Fix Dependencies
+
+     =.run
+    (i) cd ~/downloads/
+    sudo chmod +x -i installer_file.run  //Make the file executable
+
+    (ii)cd ~/downloads/
+    sudo installer_file.run   or su installer_file.run
+
+
+    
+29IT
+
+
+
+
+
